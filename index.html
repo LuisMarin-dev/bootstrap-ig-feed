@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="media/icons/instagram50x.svg">
+    <title>Your Feed</title>
+</head>
+<body>
+  <div class="container-fluid">  
+    <!-- "Nav" bar -->
+    <div class="d-flex mb-3 navbar-style">
+      <div class="p-2 align-self-center">
+        <img src="media/icons/instagram-icon50.png" width="35px" height="35px">
+      </div>
+      <div class="me-auto p-2 align-self-center ig-title">Instagram</div>
+      <!-- Create post button -->
+      <div class="p-2">
+        <button type="button" class="btn btn-success">Create new post</button>
+      </div>
+      <!-- Create post button end-->
+      <!-- Modal -->
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              ...
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Modal end -->
+
+      <!-- Dropdown -->
+      <div class="p-2">
+        <div class="dropdown">
+          <button class="btn btn-secondary dropdown-toggle drop-resize" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
+            <img src="media/icons/gear-icon.png" width="30px" height="30px">
+          </button>
+          <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton2">
+            <li><a class="dropdown-item active" href="#">Profile</a></li>
+            <li><a class="dropdown-item" href="#">Accesability</a></li>
+            <li><a class="dropdown-item" href="#">Privacy and data</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Log out</a></li>
+          </ul>
+        </div>
+      </div>
+      <!-- Dropdown end -->
+    </div>
+    <!-- Navbar end -->
+
+    <!-- View toggle -->
+    <ul class="nav nav-tabs" id="myTab" role="tablist">
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">
+          <img src="media/icons/grid-view-icon26.png">
+        </button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Profile</button>
+      </li>
+    </ul>
+    <div class="tab-content" id="myTabContent">
+      <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">grid here</div>
+      <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">single view</div>
+    </div>
+    <!-- View toggle end -->
+
+    <!-- Posts grid-->
+    <div class="row">
+      <div class="col-sm-4">
+        <div class="card text-white bg-dark mb-3" style="max-width: 18rem;">
+          <div class="card-header">Lorem ipsum dolor sit amet.             <small>10/05/23</small></div>
+          <img src="media/monk-spill.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <p class="card-title"><strong>5230 Likes</strong></p>
+            <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis repellendus quibusdam quaerat consequuntur eligendi!</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="card text-white bg-dark mb-3" style="max-width: 18rem;">
+          <div class="card-header">Lorem ipsum dolor sit amet.             <small>10/05/23</small></div>
+          <img src="media/pretty-jungle-stairs.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <p class="card-title"><strong>5230 Likes</strong></p>
+            <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis repellendus quibusdam quaerat consequuntur eligendi!</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="card text-white bg-dark mb-3" style="max-width: 18rem;">
+          <div class="card-header">Lorem ipsum dolor sit amet.             <small>10/05/23</small></div>
+          <img src="media/lil-penguin.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <p class="card-title"><strong>5230 Likes</strong></p>
+            <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis repellendus quibusdam quaerat consequuntur eligendi!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Posts grid end -->
+
+    <!-- Posts column -->
+    <div class="col-sm-5">
+      <div class="card text-white bg-dark" >
+        <div class="card-header">Lorem ipsum dolor sit amet.             <small>10/05/23</small></div>
+        <img src="media/monk-spill.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <p class="card-title"><strong>5230 Likes</strong></p>
+          <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis repellendus quibusdam quaerat consequuntur eligendi!</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card w-75">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+        <a href="#" class="btn btn-primary">Button</a>
+      </div>
+    </div>
+    <!-- Posts column end -->
+
+
+
+
+
+  </div>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>    
+</body>
+</html>
