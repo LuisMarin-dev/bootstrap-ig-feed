@@ -29,6 +29,10 @@ small {
     justify-content: end;
 }
 
+.rotate-90deg {
+    transform: rotate(90deg);
+}
+
 .give-border {
     border: solid red;
 }
