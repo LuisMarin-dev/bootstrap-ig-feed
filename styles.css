@@ -33,6 +33,17 @@ small {
     transform: rotate(90deg);
 }
 
+/* .adjust-grid-sizing {
+    min-width: 10rem;
+    min-height: 10rem;
+} */
+
+.adjust-grid-sizing img {
+    /* object-fit: cover; */
+    max-width: 200px;
+    max-height: 200px;
+}
+
 .give-border {
     border: solid red;
 }
