@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/x-icon" href="media/icons/instagram50x.svg">
     <title>Your Feed</title>
 </head>
@@ -17,35 +17,48 @@
         <img src="media/icons/instagram-icon50.png" width="35px" height="35px">
       </div>
       <div class="me-auto p-2 align-self-center ig-title">Instagram</div>
-      <!-- Create post button -->
+
+      <!-- Create post button - Button trigger modal -->
       <div class="p-2">
-        <button type="button" class="btn btn-success">Create new post</button>
+        <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">Create new post</button>
       </div>
-      <!-- Create post button end-->
-      <!-- Modal -->
-      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-              ...
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-primary">Save changes</button>
-            </div>
+      <!-- Create post button end - Button trigger modal end-->
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title text-dark new-post-button" id="exampleModalLabel">Create new post</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <h5 class="text-dark">Caption:</h5>
+            <textarea class="w-100"></textarea>
+            <button class="modal-post-buttons">
+              <img>
+                <i class="fa-solid fa-camera"></i>
+              </img>
+            </button>
+            <button class="modal-post-buttons">
+              <img>
+                <i class="fa-solid fa-location-dot"></i>
+              </img>
+            </button>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-success">Publish</button>
           </div>
         </div>
       </div>
+    </div>
       <!-- Modal end -->
 
       <!-- Dropdown -->
       <div class="p-2">
         <div class="dropdown">
-          <button class="btn btn-secondary dropdown-toggle drop-resize" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
+          <button class="btn btn-secondary dropdown-toggle " type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
             <img src="media/icons/gear-icon.png" width="30px" height="30px">
           </button>
           <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton2">
@@ -62,10 +75,10 @@
     <!-- Navbar end -->
 
     <!-- View toggle -->   
-    <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+    <ul class="nav nav-pills mb-3 justify-content-center" id="pills-tab" role="tablist">
       <li class="nav-item" role="presentation">
         <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">
-          <img src="media/icons/rectangle-thick48.png" class="rotate-90deg">
+          <img src="media/icons/rectangle-thick48.png" class="rotate-90deg" width="30px" hegiht="auto">
         </button>
       </li>
       <li class="nav-item" role="presentation">
@@ -78,23 +91,95 @@
     <div class="tab-content" id="pills-tabContent">
       <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
         <!-- Posts column -->
-      <div class="col-sm-5 d-flex justify-self-center">
-        <div class="card text-white bg-dark" >
-          <div class="card-header">Lorem ipsum dolor sit amet.             <small>10/05/23</small></div>
-          <img src="media/monk-spill.jpg" class="card-img-top" alt="...">
-          <div class="card-body">
-            <p class="card-title"><strong>5230 Likes</strong></p>
-            <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis repellendus quibusdam quaerat consequuntur eligendi!</p>
+      <div class="container col">
+        <div class="col-sm-5 d-flex justify-self-center">
+          <div class="card text-white bg-dark" >
+            <div class="card-header">Lorem ipsum dolor sit amet.             <small>10/05/23</small></div>
+            <img src="media/monk-spill.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <p class="card-title"><strong>5230 Likes</strong></p>
+              <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis repellendus quibusdam quaerat consequuntur eligendi!</p>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="col-sm-5">
-        <div class="card text-white bg-dark" >
-          <div class="card-header">Lorem ipsum dolor sit amet.             <small>10/05/23</small></div>
-          <img src="media/monk-spill.jpg" class="card-img-top" alt="...">
-          <div class="card-body">
-            <p class="card-title"><strong>5230 Likes</strong></p>
-            <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis repellendus quibusdam quaerat consequuntur eligendi!</p>
+        <div class="col-sm-5">
+          <div class="card text-white bg-dark" >
+            <div class="card-header">Lorem ipsum dolor sit amet.             <small>10/05/23</small></div>
+            <img src="media/open-coconut.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <p class="card-title"><strong>5230 Likes</strong></p>
+              <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis repellendus quibusdam quaerat consequuntur eligendi!</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-5">
+          <div class="card text-white bg-dark" >
+            <div class="card-header">Lorem ipsum dolor sit amet.             <small>10/05/23</small></div>
+            <img src="media/pretty-jungle-stairs.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <p class="card-title"><strong>5230 Likes</strong></p>
+              <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis repellendus quibusdam quaerat consequuntur eligendi!</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-5">
+          <div class="card text-white bg-dark" >
+            <div class="card-header">Lorem ipsum dolor sit amet.             <small>10/05/23</small></div>
+            <img src="media/demi-deity.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <p class="card-title"><strong>5230 Likes</strong></p>
+              <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis repellendus quibusdam quaerat consequuntur eligendi!</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-5">
+          <div class="card text-white bg-dark" >
+            <div class="card-header">Lorem ipsum dolor sit amet.             <small>10/05/23</small></div>
+            <img src="media/lil-penguin.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <p class="card-title"><strong>5230 Likes</strong></p>
+              <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis repellendus quibusdam quaerat consequuntur eligendi!</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-5">
+          <div class="card text-white bg-dark" >
+            <div class="card-header">Lorem ipsum dolor sit amet.             <small>10/05/23</small></div>
+            <img src="media/malecon.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <p class="card-title"><strong>5230 Likes</strong></p>
+              <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis repellendus quibusdam quaerat consequuntur eligendi!</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-5">
+          <div class="card text-white bg-dark" >
+            <div class="card-header">Lorem ipsum dolor sit amet.             <small>10/05/23</small></div>
+            <img src="media/hands-on-jouch.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <p class="card-title"><strong>5230 Likes</strong></p>
+              <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis repellendus quibusdam quaerat consequuntur eligendi!</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-5">
+          <div class="card text-white bg-dark" >
+            <div class="card-header">Lorem ipsum dolor sit amet.             <small>10/05/23</small></div>
+            <img src="media/hollow-leaf.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <p class="card-title"><strong>5230 Likes</strong></p>
+              <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis repellendus quibusdam quaerat consequuntur eligendi!</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-5">
+          <div class="card text-white bg-dark" >
+            <div class="card-header">Lorem ipsum dolor sit amet.             <small>10/05/23</small></div>
+            <img src="media/ice-sculpture.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <p class="card-title"><strong>5230 Likes</strong></p>
+              <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis repellendus quibusdam quaerat consequuntur eligendi!</p>
+            </div>
           </div>
         </div>
       </div>
@@ -149,7 +234,6 @@
             </div>
           </div>
         </div>
-<!--  -->
 
       </div>
       <!-- Posts grid end -->
@@ -168,7 +252,7 @@
   </div>
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-  <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>     -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/4efe8fbff7.js" crossorigin="anonymous"></script>
 </body>
 </html>

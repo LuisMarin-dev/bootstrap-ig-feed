@@ -38,7 +38,12 @@ small {
     min-height: 10rem;
 } */
 
-.adjust-grid-sizing img {
+/* .adjust-grid-sizing img {
+    /* object-fit: cover; */
+    max-width: 200px;
+    max-height: 200px;
+} */
+img {
     /* object-fit: cover; */
     max-width: 200px;
     max-height: 200px;
@@ -46,4 +51,20 @@ small {
 
 .give-border {
     border: solid red;
+}
+
+.modal-post-buttons {
+    border: solid 1px transparent;
+}
+
+.new-post-button {
+    padding: 6px 3px !important;
+}
+
+#posts-container {
+    /* width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center; */
+    
 }
