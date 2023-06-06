@@ -19,14 +19,11 @@ body a {
     height: 37px;
 }
 
-/* .drop-resize img {
-    padding-top: -1.75px;
-    padding-bottom: 1.75px;
-} */
 
 small {
     font-size: 10px;
-    justify-content: end;
+    /* margin-right: 0; */
+    /* justify-self: self-end; */
 }
 
 .rotate-90deg {
@@ -39,19 +36,16 @@ small {
 } */
 
 /* .adjust-grid-sizing img {
-    /* object-fit: cover; */
+    /* object-fit: cover; 
     max-width: 200px;
     max-height: 200px;
 } */
-img {
-    /* object-fit: cover; */
+
+/* img {
+    object-fit: cover;
     max-width: 200px;
     max-height: 200px;
-}
-
-.give-border {
-    border: solid red;
-}
+} */
 
 .modal-post-buttons {
     border: solid 1px transparent;
@@ -61,10 +55,34 @@ img {
     padding: 6px 3px !important;
 }
 
-#posts-container {
-    /* width: 100%;
+.card-img-top {
+    width: 100%;
+    height: 25vw;
+    object-fit: cover;
+}
+
+#post-column-container {
+    border: solid red;
+    width: 100%;
     height: auto;
     display: flex;
-    justify-content: center; */
-    
+    justify-content: center;
+}
+
+#post-grid {
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    grid-template-rows: 33% 33% 33%;
+}
+
+#post-grid img {
+    width: 100%;
+    height: 30vw;
+    object-fit: cover;
+}
+
+#post-grid div {
+    margin: 5px 5px;
 }
