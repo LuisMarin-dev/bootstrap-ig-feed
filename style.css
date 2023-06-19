@@ -22,30 +22,11 @@ body a {
 
 small {
     font-size: 10px;
-    /* margin-right: 0; */
-    /* justify-self: self-end; */
 }
 
 .rotate-90deg {
     transform: rotate(90deg);
 }
-
-/* .adjust-grid-sizing {
-    min-width: 10rem;
-    min-height: 10rem;
-} */
-
-/* .adjust-grid-sizing img {
-    /* object-fit: cover; 
-    max-width: 200px;
-    max-height: 200px;
-} */
-
-/* img {
-    object-fit: cover;
-    max-width: 200px;
-    max-height: 200px;
-} */
 
 .modal-post-buttons {
     border: solid 1px transparent;
